@@ -1,17 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Card from './Cards';
+import css from './index.css'
+import Sdata from './Sdata'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(
+  <>
+    <h1 className='heading_style  '>List of 6 Netflix Series </h1>
+
+    {Sdata.map((val) => {
+      return (
+        <Card
+          imgsrc={val.imgsrc}
+          sname={val.sname}
+          slink={val.slink}
+          Title={val.Title}
+
+        />)
+    })};
+    <footer className='alam'>
+       <hr className="footer-divider"></hr>
+        <p>&copy;Made by Shuaib with Love 💗 2023</p>
+    </footer>
+    
+  </>
+  , document.getElementById('root'));
+  // const myname =(a,b) => a+b;        Fat arrow function
