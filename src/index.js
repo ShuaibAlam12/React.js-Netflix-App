@@ -8,7 +8,7 @@ import Sdata from './Sdata'
 
 ReactDOM.render(
   <>
-    <h1 className='heading_style  '>List of 6 Netflix Series </h1>
+    <h1 className='heading_style  '>List of Top 6 Netflix Series </h1>
 
     {Sdata.map((val) => {
       return (
